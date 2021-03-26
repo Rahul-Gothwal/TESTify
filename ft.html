@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Food technology</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body style="background: rgb(30,31,31);">
+    <!-- Start: Sakae Curved Header -->
+    <header class="overlay">
+        <div class="overlay">
+            <h1 style="color: rgb(255,255,255);">TESTify</h1>
+            <h3 style="color: rgb(255,255,255);">Exam Season</h3>
+            <p style="color: rgb(255,255,255);">One Stop Destination for all previous year exam question for Engineering students of Jaipur National University.</p><script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="rahulgothwal" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Buy Rahul a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
+        </div>
+    </header><!-- End: Sakae Curved Header -->
+    <!-- Start: Bootstrap 4 - Table Fixed Header -->    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-7 mx-auto bg-white rounded shadow">
+
+                <!-- Fixed header table-->
+                <div class="table-responsive">
+                    <table class="table table-fixed" id="employee_table">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="col-3">Subject</th>
+                                <th scope="col" class="col-3">Semester</th>
+                                <th scope="col" class="col-3">Exam+Year</th>
+                                <th scope="col" class="col-3">Link</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <th scope="row" class="col-3"></th>
+                                <td class="col-3"></td>
+                                <td class="col-3"></td>
+                                <td class="col-3"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div><!-- End -->
+                
+            </div>
+        </div>
+    </div>
+<!-- End: Bootstrap 4 - Table Fixed Header -->
+    <!-- Start: Floating Button --><a href="https://github.com/Rahul-Gothwal/TESTify" class="float">
+<i class="fa fa-github my-float" style="color: rgb(255,255,255)"></i>
+</a>
+<!-- End: Floating Button -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>
+
+<script>
+    $(document).ready(function(){
+        $.getJSON("https://script.googleusercontent.com/macros/echo?user_content_key=M5nKcxAAvQ_AeslgdxgvI0pA3_lMOxvpssN6TpqaIrHMfuQqp0Qk4fYwm5fhSc3fPPVmx7Z8smMVbDaYoHzCi2D2Gc4ZByL-m5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnCC3wpDaAM7Oh5XA8CXOSpIMtZKqjvNEEM680q1UdDT4m_WfFFmp0yhVr2CkyFWGu1MVy8FhL7VX5l0-kMwCysYLnYZ-Rt8jRA&lib=M9KbPKSp90tn0iRhfl3F9bdP6dG-8FV_X", function(data){
+        	data = data.data;
+            var employee_data = '';
+            $.each(data, function(key,value){
+                employee_data += '<tr>';
+                employee_data += '<th class="col-3">'+value.subject+ '</th>';
+                employee_data += '<td class="col-3">'+value.semester+ '</td>';
+                employee_data += '<td class="col-3">'+value.examanyear+ '</td>';
+                employee_data += '<td class="col-3">'+`<a  href="${value.link}" target="_blank">Open</a>`+'</td>';
+                employee_data += '</tr>';
+            });
+            $('#employee_table').append(employee_data);
+        });
+    });
+</script>
