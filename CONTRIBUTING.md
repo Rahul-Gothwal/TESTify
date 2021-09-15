@@ -1,5 +1,5 @@
 # Contributing
-When contributing to this repository, please first discuss the change you wish to make via claiming an existing issue or making a new issue, [email](mailto:info@rahul.stufy) , or any other method with the owners of this repository before making a change.
+When contributing to this repository, please first discuss the change you wish to make via claiming an existing issue or making a new issue, [email](mailto:info@rahul.study) , or any other method with the owners of this repository before making a change.
 
 
 # Pull Request Process and Contribution Guidelines
